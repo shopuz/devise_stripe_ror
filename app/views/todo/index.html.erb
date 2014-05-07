@@ -1,0 +1,18 @@
+<h1> Todo applications </h1>
+
+<% @todos.each do |t| %>
+  <%= t.name %>
+  <%= link_to 'Mark as Done', todo_path(t), :method => :put %>
+
+<% end %>
+
+<h2> Done </h2>
+
+<% @todone.each do |t| %>
+  <%= t.name %>
+  <%= link_to 'Remove', t, :confirm => 'Are you sure you want to delete ?', :method => 'delete' %>
+
+<% end %>
+
+
+<%= link_to 'Add New Item', new_todo_path %>

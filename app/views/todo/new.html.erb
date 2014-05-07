@@ -1,0 +1,8 @@
+Add New Item to the list
+
+<%= form_for(:todo, :url => {:action => 'create' }) do |f| %>
+	<%= f.label :name %>: <%= f.text_field :name %>
+	<%= f.hidden_field :done, :value => false %>
+	<%= f.submit 'Add' %>
+
+<% end %>
